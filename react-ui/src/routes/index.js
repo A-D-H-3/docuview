@@ -6,11 +6,12 @@ import Mechanical from "./mechanical/mechanical";
 import Plumbing from "./plumbing/plumbing";
 import Setback from "./setback/setback";
 import Specificaitons from "./specifications/specifications";
+import Home from "./home/home";
 
 const Routes = () => {
   return (
     <>
-      <Route exact={true} path="/" render={() => <p>Home</p>} />
+      <Route exact={true} path="/" render={() => <Home />} />
       <Route exact={true} path="/mechanical" render={() => <Mechanical />} />
       <Route exact={true} path="/electrical" render={() => <Electrical />} />
       <Route exact={true} path="/plumbing" render={() => <Plumbing />} />

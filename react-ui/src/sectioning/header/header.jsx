@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Greeting from "../../components/greeting";
 
 const Header = () => {
   return (
@@ -29,6 +30,7 @@ const Header = () => {
           <NavLink to="/specifications">Specifications</NavLink>
         </li>
       </ul>
+      <Greeting />
     </header>
   );
 };
