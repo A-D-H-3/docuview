@@ -1,10 +1,10 @@
-import { GET_USERNAME } from "./actionTypes";
+import { GET_DOCUMENT } from "./actionTypes";
 
-export const updateUsername = (username) => {
+export const docSearch = (document) => {
   return {
-    type: GET_USERNAME,
+    type: GET_DOCUMENT,
     payload: {
-      username,
+      document,
     },
   };
 };

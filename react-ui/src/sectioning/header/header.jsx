@@ -1,37 +1,26 @@
 import { NavLink } from "react-router-dom";
 import Greeting from "../../components/greeting";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Navbar, Nav } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <header>
-      <div>
-        <NavLink to="/">Home</NavLink>
-      </div>
-      <ul>
-        <li>
-          <NavLink to="/mechanical">Mechanical</NavLink>
-        </li>
-        <li>
-          <NavLink to="/electrical">Electrical</NavLink>
-        </li>
-        <li>
-          <NavLink to="/plumbing">Plumbing</NavLink>
-        </li>
-        <li>
-          <NavLink to="/lifefiresafety">Life/Fire Safety</NavLink>
-        </li>
-        <li>
-          <NavLink to="/commissioning">Commissioning</NavLink>
-        </li>
-        <li>
-          <NavLink to="/orsetback">O.R. Setback</NavLink>
-        </li>
-        <li>
-          <NavLink to="/specifications">Specifications</NavLink>
-        </li>
-      </ul>
-      <Greeting />
-    </header>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="me-auto">
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/mechanical">Mechanical</Nav.Link>
+          <Nav.Link href="/electrical">Electrical</Nav.Link>
+          <Nav.Link href="/plumbing">Plumbing</Nav.Link>
+          <Nav.Link href="/lifefiresafety">Life & Fire Safety</Nav.Link>
+          <Nav.Link href="/commissioning">Commissioning</Nav.Link>
+          <Nav.Link href="/orsetback">O.R. Setback</Nav.Link>
+          <Nav.Link href="/specifications">Specifications</Nav.Link>
+          <Greeting />
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
