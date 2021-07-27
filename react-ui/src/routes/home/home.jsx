@@ -1,10 +1,10 @@
-import UsernameForm from "../../components/usernameForm";
+import DocSearchField from "../../components/docSearch";
 
 const Home = () => {
   return (
     <>
       <p>Home</p>
-      <UsernameForm />
+      <DocSearchField />
     </>
   );
 };

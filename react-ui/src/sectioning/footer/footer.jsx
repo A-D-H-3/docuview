@@ -1,18 +1,23 @@
 import { NavLink } from "react-router-dom";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <footer>
-      <ul>
-        <li>Copyright 2021</li>
-        <li>
-          <a href="https://www.houstonmethodist.org/locations/sugar-land/">
-            HMSL
-          </a>
-        </li>
-        <li>Credits</li>
-      </ul>
-    </footer>
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+      fixed="bottom"
+    >
+      <Container>
+        <Navbar.Text>Copyright 2021</Navbar.Text>
+        <Nav.Link href="https://www.houstonmethodist.org/locations/sugar-land/">
+          HMSL
+        </Nav.Link>
+        <Navbar.Text>Credits</Navbar.Text>
+      </Container>
+    </Navbar>
   );
 };
 

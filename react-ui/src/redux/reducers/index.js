@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import username from "./username";
+import document from "./documents";
 
-export default combineReducers({ username });
+export default combineReducers({ document });

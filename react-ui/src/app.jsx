@@ -1,3 +1,5 @@
+import React from "react";
+import "./app.css";
 import Footer from "./sectioning/footer/footer";
 import Header from "./sectioning/header/header";
 import Main from "./sectioning/main/main";
