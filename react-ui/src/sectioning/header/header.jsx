@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Greeting from "../../components/greeting";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
 const Header = () => {
   return (
