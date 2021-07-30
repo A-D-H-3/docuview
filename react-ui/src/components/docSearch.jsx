@@ -1,30 +1,29 @@
 import { connect } from "react-redux";
-// import data from "../mocks/data.json";
-import { docSearch } from "../redux/actions";
+import { docData } from "../docData";
+import { createDocumentSearch } from "../redux/actions";
+import { useState } from "react";
 
-const DocSearchField = ({ docSearch, document }) => {
+const DocSearchField = ({ dispatchDocument, document }) => {
+  const [search, setSearch] = useState("");
   const handleChange = (e) => {
-    const document = e.target.value;
-    docSearch(document);
+    const input = e.target.value;
+    setSearch(input);
+    dispatchDocument(input);
   };
-
-  return <input onChange={handleChange} value={document} />;
-};
-
-const DocReturnField = ({ docReturn, doc }) => {
-  const handleReturn = (e) => {
-    const doc = e.target.value;
-    docReturn(doc);
-  };
-  return <input onChange={handleReturn} value={document} />;
+  return (
+    <div>
+      <input onChange={handleChange} value={search} />
+      <div>{search}</div>
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => ({
-  document: state.docSearch,
+  document: state.document,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  docSearch: (document) => dispatch(docSearch(document)),
+  dispatchDocument: (document) => dispatch(createDocumentSearch(document)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DocSearchField);

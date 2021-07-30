@@ -1,6 +1,6 @@
 import { GET_DOCUMENT } from "./actionTypes";
 
-export const docSearch = (document) => {
+export const createDocumentSearch = (document) => {
   return {
     type: GET_DOCUMENT,
     payload: {
