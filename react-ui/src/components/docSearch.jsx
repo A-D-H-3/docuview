@@ -13,7 +13,6 @@ const DocSearchField = ({ dispatchDocument, document }) => {
   return (
     <div>
       <input onChange={handleChange} value={search} />
-      <div>{search}</div>
     </div>
   );
 };
