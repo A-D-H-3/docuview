@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Greeting from "../../components/greeting";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav, Button } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 
 const Header = () => {
   return (

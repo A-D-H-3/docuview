@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 const Home = () => {
   return (
     <>
-      <p>Home</p>
+      <div>Home</div>
       <DocSearchField />
       <Button variant="danger" size="sm">
         Search

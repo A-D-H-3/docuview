@@ -3,11 +3,13 @@ import Routes from "../../routes";
 
 const Main = () => {
   return (
-    <main>
-      <Switch>
-        <Routes />
-      </Switch>
-    </main>
+    <div>
+      <main>
+        <Switch>
+          <Routes />
+        </Switch>
+      </main>
+    </div>
   );
 };
 
