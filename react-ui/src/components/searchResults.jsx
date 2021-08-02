@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { createDocumentSearch } from "../redux/actions";
 import DocData from "../docData";
+import { Card, Button } from "react-bootstrap";
 
 export const SearchResults = ({ document }) => {
   console.log(DocData);
@@ -10,13 +11,14 @@ export const SearchResults = ({ document }) => {
       <div>{document}</div>
       {DocData.map((doc) => {
         return (
-          <ul>
-            <li>{doc.number}</li>
-            <li>{doc.title}</li>
-            <li>{doc.number}</li>
-            <li>{doc.rev}</li>
-            <img src={doc.img} />
-          </ul>
+          <Card style={{ width: "25rem" }}>
+            <Card.Img variant="top" src={doc.img} />
+            <Card.Body>
+              <Card.Title>{doc.title}</Card.Title>
+              <Card.Text>Document Number: {doc.number}</Card.Text>
+              <Card.Text>Revision: {doc.rev}</Card.Text>
+            </Card.Body>
+          </Card>
         );
       })}
     </div>
