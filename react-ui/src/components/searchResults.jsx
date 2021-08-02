@@ -1,17 +1,24 @@
 import { connect } from "react-redux";
 import { createDocumentSearch } from "../redux/actions";
-import { docData } from "../docData";
+import DocData from "../docData";
 
 export const SearchResults = ({ document }) => {
-  console.log(docData);
-
-  const searchedDocuments = docData.filter(
-    (value) => value === JSON.stringify("")
-  );
+  console.log(DocData);
 
   return (
     <div>
-      <div>{searchedDocuments}</div>
+      <div>{document}</div>
+      {DocData.map((doc) => {
+        return (
+          <ul>
+            <li>{doc.number}</li>
+            <li>{doc.title}</li>
+            <li>{doc.number}</li>
+            <li>{doc.rev}</li>
+            <img src={doc.img} />
+          </ul>
+        );
+      })}
     </div>
   );
 };
