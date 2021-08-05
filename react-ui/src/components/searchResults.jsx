@@ -26,7 +26,7 @@ export const SearchResults = ({ document }) => {
       {results &&
         results.map((doc) => {
           return (
-            <Card style={{ width: "25rem" }}>
+            <Card style={{ width: "20rem" }} fluid>
               <Card.Img variant="top" src={doc.img} />
               <Card.Body>
                 <Card.Title>{doc.title}</Card.Title>
