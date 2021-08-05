@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { createDocumentSearch } from "../redux/actions";
 import docData from "../docData";
-import { Card, Button } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 
 export const SearchResults = ({ document }) => {
   const [results, setResults] = useState();
@@ -21,12 +21,11 @@ export const SearchResults = ({ document }) => {
   }, [document]);
 
   return (
-    <div>
-      <div>{document}</div>
+    <div className="doc-cards">
       {results &&
         results.map((doc) => {
           return (
-            <Card style={{ width: "20rem" }} fluid>
+            <Card border="danger" style={{ width: "20rem" }} className="mb-4">
               <Card.Img variant="top" src={doc.img} />
               <Card.Body>
                 <Card.Title>{doc.title}</Card.Title>

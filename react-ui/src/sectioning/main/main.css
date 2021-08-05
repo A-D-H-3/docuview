@@ -1,16 +1,5 @@
-.background {
-  background-image: url(../../images/1713_NewSugarLand_1140x560.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100%;
-}
-
-.container {
-  height: 100%;
-}
-
-.DocSearchField {
+/* .main-routes {
+  border: 2px solid crimson;
+  display: flex;
   justify-content: center;
-}
+} */
