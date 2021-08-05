@@ -10,15 +10,13 @@ const Main = () => {
   return (
     <div>
       <Container className="background" fluid>
-        <Row>
-          <main>
-            <Switch>
-              <Routes />
-            </Switch>
-            <DocSearchField />
-            <SearchResults />
-          </main>
-        </Row>
+        <main>
+          <Switch>
+            <Routes />
+          </Switch>
+          <DocSearchField />
+          <SearchResults />
+        </main>
       </Container>
     </div>
   );

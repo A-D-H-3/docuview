@@ -8,5 +8,9 @@
 }
 
 .container {
+  height: 100%;
+}
+
+.DocSearchField {
   justify-content: center;
 }
