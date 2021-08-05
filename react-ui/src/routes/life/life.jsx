@@ -1,5 +1,5 @@
 const Life = () => {
-  return <p>Life & Fire Safety</p>;
+  return <h1>Life & Fire Safety</h1>;
 };
 
 export default Life;

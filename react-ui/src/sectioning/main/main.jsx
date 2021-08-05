@@ -1,24 +1,22 @@
 import { Switch } from "react-router-dom";
 import Routes from "../../routes";
 import "./main.css";
-import { Container, Row, Button } from "react-bootstrap";
+import { Container, Row, Image } from "react-bootstrap";
 import DocSearchField from "../../components/docSearch";
 import SearchResults from "../../components/searchResults";
+// import background from "../../images/background.jpg";
 
 const Main = () => {
   return (
-    <div className="background">
-      <Container fluid>
+    <div>
+      <Container className="background" fluid>
         <Row>
           <main>
             <Switch>
-              <DocSearchField />
               <Routes />
             </Switch>
+            <DocSearchField />
             <SearchResults />
-            <Button variant="danger" size="sm">
-              Search
-            </Button>
           </main>
         </Row>
       </Container>

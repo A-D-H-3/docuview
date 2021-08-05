@@ -1,5 +1,5 @@
 const Electrical = () => {
-  return <p>Electrical</p>;
+  return <h1>Electrical</h1>;
 };
 
 export default Electrical;

@@ -1,5 +1,5 @@
 const Plumbing = () => {
-  return <p>Plumbing</p>;
+  return <h1>Plumbing</h1>;
 };
 
 export default Plumbing;
