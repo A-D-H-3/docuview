@@ -1,5 +1,5 @@
 const Specificaitons = () => {
-  return <p>Specificaitons</p>;
+  return <h1>Specificaitons</h1>;
 };
 
 export default Specificaitons;

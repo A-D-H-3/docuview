@@ -3,8 +3,7 @@ import UsernameForm from "../../components/docSearch";
 const Mechanical = () => {
   return (
     <>
-      <p>Mechanical</p>
-      <UsernameForm />
+      <h1>Mechanical</h1>
     </>
   );
 };

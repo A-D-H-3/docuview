@@ -1,5 +1,5 @@
 const Commissioning = () => {
-  return <p>Commissioning</p>;
+  return <h1>Commissioning</h1>;
 };
 
 export default Commissioning;
