@@ -24,6 +24,12 @@ const docData = [
     rev: "C",
     img: IMG3,
   },
+  {
+    id: "4",
+    number: "1234-DOC-P4",
+    title: "HMCL General Arrangement Phase 3",
+    rev: "D",
+  },
 ];
 
 export default docData;

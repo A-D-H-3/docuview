@@ -10,8 +10,12 @@ const DocSearchField = ({ dispatchDocument, document }) => {
     dispatchDocument(input);
   };
   return (
-    <div>
-      <input onChange={handleChange} value={search} />
+    <div className="search">
+      <input
+        onChange={handleChange}
+        value={search}
+        placeholder="Search document..."
+      />
     </div>
   );
 };

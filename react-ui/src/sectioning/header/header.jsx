@@ -1,11 +1,17 @@
 // import { Link } from "react-router-dom";
-import Greeting from "../../components/greeting";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
 const Header = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+      sticky="top"
+      fixed="top"
+    >
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
@@ -17,7 +23,6 @@ const Header = () => {
           <Nav.Link href="/commissioning">Commissioning</Nav.Link>
           <Nav.Link href="/orsetback">O.R. Setback</Nav.Link>
           <Nav.Link href="/specifications">Specifications</Nav.Link>
-          <Greeting />
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -1,6 +1,3 @@
-import DocSearchField from "../../components/docSearch";
-import { Button } from "react-bootstrap";
-
 const Home = () => {
   return (
     <>
