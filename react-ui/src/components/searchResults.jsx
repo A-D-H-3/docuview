@@ -8,10 +8,10 @@ export const SearchResults = ({ document }) => {
   const [results, setResults] = useState();
 
   const handleLiveSearch = () => {
-    // const match = docData.filter((doc) => doc.number.indexOf(document) > -1);
-    const match =
-      docData.filter((doc) => doc.number.indexOf(document) > -1) ||
-      docData.filter((doc) => doc.title.indexOf(document));
+    const match = docData.filter((doc) => doc.number.indexOf(document) > -1);
+    // const match =
+    //   docData.filter((doc) => doc.number.indexOf(document) > -1) ||
+    //   docData.filter((doc) => doc.title.indexOf(document));
     setResults(match);
   };
 
