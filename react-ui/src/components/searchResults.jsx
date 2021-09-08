@@ -8,11 +8,14 @@ export const SearchResults = ({ document }) => {
   const [results, setResults] = useState();
 
   const handleLiveSearch = () => {
-    const match = docData.filter((doc) => doc.number.indexOf(document) > -1);
-    // const match =
-    //   docData.filter((doc) => doc.number.indexOf(document) > -1) ||
-    //   docData.filter((doc) => doc.title.indexOf(document));
-    setResults(match);
+    const docMatch = docData.filter(
+      (doc) =>
+        doc.title.toLowerCase().indexOf(document) > -1 ||
+        doc.number.indexOf(document) > -1 ||
+        doc.rev.indexOf(document) > -1
+    );
+
+    setResults(docMatch);
   };
 
   useEffect(() => {
@@ -25,7 +28,7 @@ export const SearchResults = ({ document }) => {
       {results &&
         results.map((doc) => {
           return (
-            <Card border="danger" style={{ width: "20rem" }} className="mb-4">
+            <Card border="danger" style={{ width: "30rem" }} className="mb-4">
               <Card.Img variant="top" src={doc.img} />
               <Card.Body>
                 <Card.Title>{doc.title}</Card.Title>
