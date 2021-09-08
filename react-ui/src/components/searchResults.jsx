@@ -11,7 +11,8 @@ export const SearchResults = ({ document }) => {
     const docMatch = docData.filter(
       (doc) =>
         doc.title.toLowerCase().indexOf(document) > -1 ||
-        doc.number.indexOf(document) > -1
+        doc.number.indexOf(document) > -1 ||
+        doc.rev.indexOf(document) > -1
     );
 
     setResults(docMatch);
