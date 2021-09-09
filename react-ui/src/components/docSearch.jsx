@@ -7,7 +7,7 @@ const DocSearchField = ({ dispatchDocument, document }) => {
   const handleChange = (e) => {
     const input = e.target.value;
     setSearch(input);
-    dispatchDocument(input);
+    dispatchDocument(input.toLowerCase());
   };
   return (
     <div className="search">

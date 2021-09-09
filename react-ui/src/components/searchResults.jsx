@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { createDocumentSearch } from "../redux/actions";
 import docData from "../docData";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 export const SearchResults = ({ document }) => {
   const [results, setResults] = useState();
@@ -10,9 +10,9 @@ export const SearchResults = ({ document }) => {
   const handleLiveSearch = () => {
     const docMatch = docData.filter(
       (doc) =>
-        doc.title.toLowerCase().indexOf(document) > -1 ||
+        doc.title.toLowerCase(document).indexOf(document) > -1 ||
         doc.number.indexOf(document) > -1 ||
-        doc.rev.indexOf(document) > -1
+        doc.rev.toLowerCase().indexOf(document) > -1
     );
 
     setResults(docMatch);
