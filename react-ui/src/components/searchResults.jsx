@@ -28,7 +28,7 @@ export const SearchResults = ({ document }) => {
       {results &&
         results.map((doc) => {
           return (
-            <Card border="danger" style={{ width: "30rem" }} className="mb-4">
+            <Card border="danger" style={{ width: "20rem" }} className="mb-4">
               <Card.Img variant="top" src={doc.img} />
               <Card.Body>
                 <Card.Title>{doc.title}</Card.Title>
