@@ -2,10 +2,12 @@
   padding: 0;
   margin: auto;
 }
+
 .doc-cards {
   padding-top: 20px;
   background: none;
   justify-content: center;
+  height: 100vh;
 }
 
 h1 {
