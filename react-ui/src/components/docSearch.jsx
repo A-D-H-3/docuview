@@ -14,7 +14,7 @@ const DocSearchField = ({ dispatchDocument, document }) => {
       <input
         onChange={handleChange}
         value={search}
-        placeholder="Search document..."
+        placeholder="Type Doc Title, Number, or Rev..."
       />
     </div>
   );

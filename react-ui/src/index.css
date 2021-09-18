@@ -1,5 +1,5 @@
 * {
-  padding: 0;
+  /* padding: 0; */
   margin: auto;
 }
 
@@ -41,7 +41,7 @@ input:hover {
   border-radius: 12px;
   background-color: white;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 80vw;
 }

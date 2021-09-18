@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { createDocumentSearch } from "../redux/actions";
 import docData from "../docData";
-import { Card } from "react-bootstrap";
+import { Card, Row, Col, CardGroup } from "react-bootstrap";
 
 export const SearchResults = ({ document }) => {
   const [results, setResults] = useState();
@@ -23,19 +23,49 @@ export const SearchResults = ({ document }) => {
     handleLiveSearch();
   }, [document]);
 
+  //**************-----Need to fix the display view for standard iPad dimensions-----***************//
+
   return (
     <div className="doc-cards">
       {results &&
         results.map((doc) => {
           return (
-            <Card border="danger" style={{ width: "20rem" }} className="mb-4">
-              <Card.Img variant="top" src={doc.img} />
-              <Card.Body>
-                <Card.Title>{doc.title}</Card.Title>
-                <Card.Text>Document Number: {doc.number}</Card.Text>
-                <Card.Text>Revision: {doc.rev}</Card.Text>
-              </Card.Body>
-            </Card>
+            // <Row xs={"auto"} md={3} className="g-4">
+            //   {Array.from({ length: 1 }).map((_, idx) => (
+            //     <Col>
+            <CardGroup>
+              <Card border="danger" style={{ width: "16rem" }} className="mb-4">
+                <Card.Img variant="top" src={doc.img} />
+                <Card.Body>
+                  <Card.Title>{doc.title}</Card.Title>
+                  <Card.Text>Document Number: {doc.number}</Card.Text>
+                  <Card.Text>Revision: {doc.rev}</Card.Text>
+                </Card.Body>
+              </Card>
+              {/* </Col>
+              ))}
+              <Col> */}
+              <Card border="danger" style={{ width: "16rem" }} className="mb-4">
+                <Card.Img variant="top" src={doc.img} />
+                <Card.Body>
+                  <Card.Title>{doc.title}</Card.Title>
+                  <Card.Text>Document Number: {doc.number}</Card.Text>
+                  <Card.Text>Revision: {doc.rev}</Card.Text>
+                </Card.Body>
+              </Card>
+              {/* </Col>
+              <Col> */}
+              <Card border="danger" style={{ width: "16rem" }} className="mb-4">
+                <Card.Img variant="top" src={doc.img} />
+                <Card.Body>
+                  <Card.Title>{doc.title}</Card.Title>
+                  <Card.Text>Document Number: {doc.number}</Card.Text>
+                  <Card.Text>Revision: {doc.rev}</Card.Text>
+                </Card.Body>
+              </Card>
+            </CardGroup>
+            //   </Col>
+            // </Row>
           );
         })}
     </div>

@@ -10,13 +10,13 @@ const Footer = () => {
       variant="dark"
       fixed="bottom"
     >
-      <Container>
-        <Navbar.Text>Copyright 2021</Navbar.Text>
-        <Nav.Link href="https://www.houstonmethodist.org/locations/sugar-land/">
-          HMSL
-        </Nav.Link>
-        <Navbar.Text>Credits</Navbar.Text>
-      </Container>
+      {/* <Container> */}
+      <Navbar.Text>Copyright 2021</Navbar.Text>
+      <Nav.Link href="https://www.houstonmethodist.org/locations/sugar-land/">
+        HMSL
+      </Nav.Link>
+      <Navbar.Text>Credits</Navbar.Text>
+      {/* </Container> */}
     </Navbar>
   );
 };
